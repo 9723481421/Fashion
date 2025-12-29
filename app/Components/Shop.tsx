@@ -4,37 +4,37 @@ const products = [
   {
     id: 1,
     name: "Denim Jacket",
-    img: "/Img/pic7.webp",
+    img: "/Img/pic2.webp",
     price: "$45",
   },
   {
     id: 2,
     name: "Gray T-Shirt",
-    img: "/Img/pic6.webp",
+    img: "/Img/pic3.webp",
     price: "$30",
   },
   {
     id: 3,
     name: "White Top",
-    img: "/Img/pic5.webp",
+    img: "/Img/pic4.webp",
     price: "$25",
   },
   {
     id: 4,
     name: "Casual Shirt",
-    img: "/Img/pic4.webp",
+    img: "/Img/pic5.webp",
     price: "$35",
   },
   {
     id: 5,
     name: "Blue Jeans",
-    img: "/Img/pic3.webp",
+    img: "/Img/pic6.webp",
     price: "$40",
   },
   {
     id: 6,
     name: "Black Hoodie",
-    img: "/Img/pic2.webp",
+    img: "/Img/pic7.webp",
     price: "$50",
   },
 ];
