@@ -1,0 +1,87 @@
+.contact-container {
+  max-width: 720px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.contact-container h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+/* Label */
+.contact-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Input & Textarea */
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 22px;
+  border-radius: 8px;
+  border: 1px solid #e1e1e1;
+  font-size: 16px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Focus effect */
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border-color: #0d6efd;
+  background-color: #eef5ff;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+/* Textarea */
+.contact-container textarea {
+  resize: none;
+  height: 130px;
+}
+
+/* Button */
+.contact-container button {
+  width: 100%;
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: #fff;
+  padding: 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.contact-container button:hover {
+  background: linear-gradient(135deg, #0b5ed7, #084298);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-container h2 {
+    font-size: 24px;
+  }
+}
