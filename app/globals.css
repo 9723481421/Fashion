@@ -2828,26 +2828,23 @@ button {
 
 
 /* Banner */
+/* Banner */
 .products-banner {
-  height: 250px;
-  background: url("/img/bac2.webp") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #f5f5f5;
+  padding: 60px 0;
+  text-align: center;
 }
 
 .products-banner h1 {
-  color: #fff;
-  font-size: 48px;
-  letter-spacing: 2px;
+  font-size: 36px;
+  font-weight: 600;
 }
 
 /* Layout */
 .products-wrapper {
-  width: 90%;
-  margin: 60px auto;
   display: flex;
-  gap: 40px;
+  padding: 40px;
+  gap: 30px;
 }
 
 /* Sidebar */
@@ -2856,8 +2853,8 @@ button {
 }
 
 .sidebar h3 {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
 .sidebar ul {
@@ -2866,26 +2863,20 @@ button {
 }
 
 .sidebar ul li {
-  color: #777;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   cursor: pointer;
-}
-
-.sidebar ul li:hover {
-  color: #000;
 }
 
 .sidebar label {
   display: block;
-  margin-bottom: 10px;
-  color: #777;
+  margin-bottom: 8px;
 }
 
 .mt {
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
-/* Right Content */
+/* Products Content */
 .products-content {
   flex: 1;
 }
@@ -2895,57 +2886,48 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .products-top select {
-  padding: 8px 12px;
+  padding: 6px 10px;
   margin-right: 10px;
 }
 
-.products-top p {
-  color: #777;
-}
-
-/* Product Grid */
+/* Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 25px;
 }
 
+/* Card */
 .product-card {
   text-align: center;
+  border: 1px solid #eee;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.product-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
 }
 
 .product-card h4 {
   margin: 10px 0 5px;
+  font-size: 16px;
 }
 
 .product-card span {
-  color: #777;
+  font-weight: bold;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .products-wrapper {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 
 /* sale */

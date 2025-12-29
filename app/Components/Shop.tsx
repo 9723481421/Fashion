@@ -1,12 +1,12 @@
-import Image from "next/image";
+"use client";
 
 const products = [
-  { id: 1, name: "Denim Jacket", image: "/img/fac1.webp", price: "$45" },
-  { id: 2, name: "Gray T-Shirt", image: "/img/fac2.webp", price: "$30" },
-  { id: 3, name: "White Top", image: "/img/fac3.webp", price: "$25" },
-  { id: 4, name: "Casual Shirt", image: "/img/fac4.webp", price: "$35" },
-  { id: 5, name: "Blue Jeans", image: "/img/fac5.webp", price: "$40" },   // ➕ NEW
-  { id: 6, name: "Black Hoodie", image: "/img/fac6.webp", price: "$50" }, // ➕ NEW
+  { id: 1, name: "Denim Jacket", img: "/img/fac1.webp", price: "$45" },
+  { id: 2, name: "Gray T-Shirt", img: "/img/fac2.webp", price: "$30" },
+  { id: 3, name: "White Top", img: "/img/fac3.webp", price: "$25" },
+  { id: 4, name: "Casual Shirt", img: "/img/fac4.webp", price: "$35" },
+  { id: 5, name: "Blue Jeans", img: "/img/fac5.webp", price: "$40" },
+  { id: 6, name: "Black Hoodie", img: "/img/fac6.webp", price: "$50" },
 ];
 
 export default function Products() {
@@ -18,7 +18,7 @@ export default function Products() {
       </div>
 
       <div className="products-wrapper">
-        {/* LEFT SIDEBAR */}
+        {/* Sidebar */}
         <aside className="sidebar">
           <h3>Categories</h3>
           <ul>
@@ -34,9 +34,8 @@ export default function Products() {
           <label><input type="checkbox" /> Red</label>
         </aside>
 
-        {/* RIGHT CONTENT */}
+        {/* Products */}
         <section className="products-content">
-          {/* TOP BAR */}
           <div className="products-top">
             <div>
               <select>
@@ -55,15 +54,13 @@ export default function Products() {
             <p>Showing 1 to 6 of 6 items</p>
           </div>
 
-          {/* PRODUCT GRID */}
           <div className="product-grid">
             {products.map((item) => (
               <div className="product-card" key={item.id}>
-                <Image
-                  src={item.image}
+                <img
+                  src={item.img}
                   alt={item.name}
-                  width={300}
-                  height={400}
+                  className="product-img"
                 />
                 <h4>{item.name}</h4>
                 <span>{item.price}</span>
