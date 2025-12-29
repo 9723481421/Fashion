@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import "./WatchesCategory.css";
+// import "./WatchesCategory.css";
 
 interface Watch {
   id: number;
