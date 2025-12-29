@@ -4,19 +4,19 @@ const products = [
   {
     id: 1,
     name: "Denim Jacket",
-    img: "/Img/pic2.webp",
+    img: "/Img/pic3.webp",
     price: "$45",
   },
   {
     id: 2,
     name: "Gray T-Shirt",
-    img: "/Img/pic3.webp",
+    img: "/Img/pic4.webp",
     price: "$30",
   },
   {
     id: 3,
     name: "White Top",
-    img: "/Img/pic4.webp",
+    img: "/Img/pic6.webp",
     price: "$25",
   },
   {
@@ -28,7 +28,7 @@ const products = [
   {
     id: 5,
     name: "Blue Jeans",
-    img: "/Img/pic6.webp",
+    img: "/Img/pic2.webp",
     price: "$40",
   },
   {
