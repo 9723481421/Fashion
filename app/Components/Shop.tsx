@@ -1,18 +1,47 @@
 "use client";
 
 const products = [
-  { id: 1, name: "Denim Jacket", img: "/img/fac1.webp", price: "$45" },
-  { id: 2, name: "Gray T-Shirt", img: "/img/fac2.webp", price: "$30" },
-  { id: 3, name: "White Top", img: "/img/fac3.webp", price: "$25" },
-  { id: 4, name: "Casual Shirt", img: "/img/fac4.webp", price: "$35" },
-  { id: 5, name: "Blue Jeans", img: "/img/fac5.webp", price: "$40" },
-  { id: 6, name: "Black Hoodie", img: "/img/fac6.webp", price: "$50" },
+  {
+    id: 1,
+    name: "Denim Jacket",
+    img: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
+    price: "$45",
+  },
+  {
+    id: 2,
+    name: "Gray T-Shirt",
+    img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    price: "$30",
+  },
+  {
+    id: 3,
+    name: "White Top",
+    img: "https://images.unsplash.com/photo-1520975916090-3105956dac38",
+    price: "$25",
+  },
+  {
+    id: 4,
+    name: "Casual Shirt",
+    img: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf",
+    price: "$35",
+  },
+  {
+    id: 5,
+    name: "Blue Jeans",
+    img: "https://images.unsplash.com/photo-1542272604-787c3835535d",
+    price: "$40",
+  },
+  {
+    id: 6,
+    name: "Black Hoodie",
+    img: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990",
+    price: "$50",
+  },
 ];
 
 export default function Products() {
   return (
     <>
-      {/* Banner */}
       <div className="products-banner">
         <h1>PRODUCTS</h1>
       </div>
@@ -22,46 +51,27 @@ export default function Products() {
         <aside className="sidebar">
           <h3>Categories</h3>
           <ul>
-            <li>Best Seller (8 items)</li>
-            <li>Featured (8 items)</li>
-            <li>Men (8 items)</li>
-            <li>Women (8 items)</li>
+            <li>Best Seller</li>
+            <li>Featured</li>
+            <li>Men</li>
+            <li>Women</li>
           </ul>
-
-          <h3 className="mt">Color</h3>
-          <label><input type="checkbox" /> Black</label>
-          <label><input type="checkbox" /> Gray</label>
-          <label><input type="checkbox" /> Red</label>
         </aside>
 
         {/* Products */}
         <section className="products-content">
           <div className="products-top">
-            <div>
-              <select>
-                <option>Alphabetically, A-Z</option>
-                <option>Alphabetically, Z-A</option>
-                <option>Price, Low to High</option>
-              </select>
-
-              <select>
-                <option>10</option>
-                <option>20</option>
-                <option>30</option>
-              </select>
-            </div>
-
-            <p>Showing 1 to 6 of 6 items</p>
+            <select>
+              <option>A-Z</option>
+              <option>Z-A</option>
+            </select>
+            <p>Showing 6 products</p>
           </div>
 
           <div className="product-grid">
             {products.map((item) => (
               <div className="product-card" key={item.id}>
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className="product-img"
-                />
+                <img src={item.img} alt={item.name} className="product-img" />
                 <h4>{item.name}</h4>
                 <span>{item.price}</span>
               </div>
