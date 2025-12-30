@@ -450,6 +450,9 @@
 /* WatchesCategory.css */
 
 /* Reset and Base Styles */
+/* WatchesCategory.css */
+
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -594,6 +597,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  background: #f5f5f5;
 }
 
 .watch-img {
@@ -1001,6 +1005,18 @@ body {
   .cart-stats {
     grid-template-columns: 1fr;
   }
+}
+
+/* Image Loading Animation */
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+.img-container:empty {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
 }
 /* Fashe */
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-// import "./WatchesCategory.css";
+import "./WatchesCategory.css";
 
 interface Watch {
   id: number;
@@ -10,15 +10,56 @@ interface Watch {
   img: string;
 }
 
+// Use placeholder images from Picsum or your actual deployed paths
 const watches: Watch[] = [
-  { id: 1, name: "Classic Leather", price: 249, img: "/img/banner-02.webp" },
-  { id: 2, name: "Smart Watch Pro", price: 399, img: "/img/banner-03.webp" },
-  { id: 3, name: "Luxury Gold", price: 899, img: "/img/banner-04.jpg" },
-  { id: 4, name: "Sports Edition", price: 199, img: "/img/banner-05.webp" },
-  { id: 5, name: "Minimal Black", price: 179, img: "/img/banner-07.webp" },
-  { id: 6, name: "Chronograph Pro", price: 499, img: "/img/banner-09.webp" },
-  { id: 7, name: "Rose Gold Women", price: 299, img: "/img/banner10.webp" },
-  { id: 8, name: "Digital Sport", price: 159, img: "/img/banner11.webp" },
+  { 
+    id: 1, 
+    name: "Classic Leather", 
+    price: 249, 
+    img: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+  },
+  { 
+    id: 2, 
+    name: "Smart Watch Pro", 
+    price: 399, 
+    img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+  },
+  { 
+    id: 3, 
+    name: "Luxury Gold", 
+    price: 899, 
+    img: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+  },
+  { 
+    id: 4, 
+    name: "Sports Edition", 
+    price: 199, 
+    img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+  },
+  { 
+    id: 5, 
+    name: "Minimal Black", 
+    price: 179, 
+    img: "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+  },
+  { 
+    id: 6, 
+    name: "Chronograph Pro", 
+    price: 499, 
+    img: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+  },
+  { 
+    id: 7, 
+    name: "Rose Gold Women", 
+    price: 299, 
+    img: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+  },
+  { 
+    id: 8, 
+    name: "Digital Sport", 
+    price: 159, 
+    img: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+  },
 ];
 
 export default function WatchesCategory() {
@@ -103,6 +144,10 @@ export default function WatchesCategory() {
                         src={watch.img} 
                         alt={watch.name} 
                         className={`watch-img ${isHovered ? 'img-hover' : ''}`} 
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = "https://via.placeholder.com/300x200/CCCCCC/666666?text=Watch+Image";
+                        }}
                       />
                       {isHovered && <div className="quick-view">QUICK VIEW</div>}
                     </div>
@@ -171,6 +216,10 @@ export default function WatchesCategory() {
                         src={watch.img} 
                         alt={watch.name} 
                         className={`watch-img ${isHovered ? 'img-hover' : ''}`} 
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = "https://via.placeholder.com/300x200/CCCCCC/666666?text=Watch+Image";
+                        }}
                       />
                       {isHovered && <div className="quick-view">QUICK VIEW</div>}
                     </div>
